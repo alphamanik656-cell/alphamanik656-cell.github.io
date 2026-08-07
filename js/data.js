@@ -12,7 +12,9 @@ const CONFIG = {
   title: "AI Project Developer",
   about: `I'm Ainesh Manik, an AI Project Developer who likes building agents that go from idea to
     finished output with as little hand-holding as possible — searching the web, calling APIs,
-    analyzing data, and writing up the results.`
+    analyzing data, and writing up the results. What connects these projects is where business
+    and technology meet — funding decisions, risk decisions, learning decisions. That intersection
+    is what I want to study next.`
 };
 
 // ---- ABOUT / QUICK FACTS ---------------------------------------------------
@@ -31,8 +33,8 @@ const PROJECTS = [
     title: "YEA Today Grant Finder Agent",
     icon: "search",
     status: "live",
-    summary: "An autonomous agent that finds and drafts grant applications for a youth entrepreneurship nonprofit.",
-    description: "Built for YEA Today (Youth Entrepreneurship Alliance Today), a national 501(c)(3). The agent searches the web for grants ($1K–$25K, national, 501(c)(3)-eligible), ranks them by fit, and drafts application narratives for the top matches — turning a manual monthly research task into a single command.",
+    summary: "Finds real grant funding for a national youth entrepreneurship nonprofit — ranked by fit and ready to apply to, not just a list of search results.",
+    description: "Built for YEA Today (Youth Entrepreneurship Alliance Today), a national 501(c)(3). The agent searches the web for grants ($1K–$25K, national, 501(c)(3)-eligible), ranks them by fit, and drafts application narratives for the top matches — so the organization spends its time applying, not searching.",
     tags: ["Python", "Claude API", "Brave Search API"],
     links: [
       { label: "View Project", href: "#" }
