@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ainesh Manik — AI Project Developer</title>
+<meta name="description" content="Portfolio of Ainesh Manik — AI Project Developer. Autonomous agents, tools, and experiments." />
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="noise-overlay"></div>
+
+<!-- ===== NAV ===== -->
+<header class="nav-wrap">
+  <nav class="nav">
+    <a href="#top" class="nav-logo">
+      <span class="logo-mark">A</span>
+      <span class="logo-text">Ainesh Manik</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="top">
+  <div class="hero-glow"></div>
+  <div class="grid-overlay"></div>
+  <div class="hero-inner reveal">
+    <div class="eyebrow">Building autonomous agents & AI tools</div>
+    <h1 class="hero-title">Ainesh Manik</h1>
+    <p class="hero-subtitle">AI Project Developer</p>
+    <p class="hero-tagline">I design and ship AI agents that do real work — from finding grant funding to
+      analyzing market risk to tutoring students. This is where I keep them.</p>
+    <div class="hero-actions">
+      <a href="#work" class="btn btn-primary">View my work</a>
+      <a href="#contact" class="btn btn-secondary">Get in touch</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section class="section" id="work">
+  <div class="section-head reveal">
+    <span class="section-kicker">Work</span>
+    <h2 class="section-title">Agents &amp; Projects</h2>
+    <p class="section-desc">A running collection of the AI agents and tools I've built — each one solving a real problem end to end.</p>
+  </div>
+  <div class="project-grid" id="projectGrid"></div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="section" id="about">
+  <div class="about-grid reveal">
+    <div class="section-head about-head-left">
+      <span class="section-kicker">About</span>
+      <h2 class="section-title">Who I am</h2>
+      <div class="about-facts" id="aboutFacts"></div>
+    </div>
+    <div class="about-body">
+      <p>I'm Ainesh Manik, an AI Project Developer who likes building agents that go from idea to
+        finished output with as little hand-holding as possible — searching the web, calling APIs,
+        analyzing data, and writing up the results.</p>
+      <p>This site is my running lab notebook: a place to show colleges, recruiters, and collaborators
+        what I've built, how it works, and what I'm working on next.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section class="section" id="skills">
+  <div class="section-head reveal">
+    <span class="section-kicker">Skills</span>
+    <h2 class="section-title">Tools I build with</h2>
+  </div>
+  <div class="skills-grid" id="skillsGrid"></div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="section contact-section" id="contact">
+  <div class="contact-card reveal">
+    <span class="section-kicker">Contact</span>
+    <h2 class="section-title">Let's talk</h2>
+    <p class="section-desc">Whether you're reviewing an application, hiring, or just curious about a
+      project — reach out.</p>
+    <div class="contact-links" id="contactLinks"></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>&copy; <span id="year"></span> Ainesh Manik. Built from scratch, one agent at a time.</p>
+</footer>
+
+<script src="js/icons.js"></script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
