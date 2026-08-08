@@ -59,12 +59,12 @@ const PROJECTS = [
   {
     title: "Explain My Mistake",
     icon: "chat",
-    status: "in-progress",
+    status: "live",
     summary: "An AI math tutor that reads a photo of your work and explains exactly where it went wrong.",
-    description: "Students upload a photo of their handwritten math work; a vision model identifies the mistake and explains the underlying misconception rather than just giving the right answer. Backend runs locally on Ollama with llama3.2-vision (no API cost), with a React frontend rendering step-by-step LaTeX explanations via KaTeX.",
-    tags: ["Node.js", "Express", "Ollama", "React", "KaTeX"],
+    description: "Students upload a photo of their handwritten math work, or paste their steps as text; a vision model identifies the exact step where their reasoning went wrong, explains the misconception behind it, and walks through the correct solution — with a hint-only mode for students who want a nudge instead of the answer.",
+    tags: ["TanStack Start", "React", "Ollama Cloud"],
     links: [
-      { label: "View Project", href: "#" }
+      { label: "View Project", href: "https://math-mistake-mentor.lovable.app/" }
     ],
     // type "annotation" = flags the mistake, shows the fix, and the tutor's hint.
     readout: {
