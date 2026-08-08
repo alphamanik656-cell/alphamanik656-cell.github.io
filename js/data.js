@@ -34,10 +34,10 @@ const PROJECTS = [
     icon: "search",
     status: "live",
     summary: "Finds real grant funding for a national youth entrepreneurship nonprofit — ranked by fit and ready to apply to, not just a list of search results.",
-    description: "Built for YEA Today (Youth Entrepreneurship Alliance Today), a national 501(c)(3). The agent searches the web for grants ($1K–$25K, national, 501(c)(3)-eligible), ranks them by fit, and drafts application narratives for the top matches — so the organization spends its time applying, not searching.",
-    tags: ["Python", "Claude API", "Brave Search API"],
+    description: "Built for YEA Today (Youth Entrepreneurship Alliance Today), a national 501(c)(3). Searches Grants.gov for federal opportunities, scrapes 25 private foundation grant pages, and cross-references ProPublica's nonprofit tax filings to find funders with a track record in similar causes — then a local AI model ranks every match by fit and drafts application narratives, entirely free with no API keys.",
+    tags: ["Python", "Grants.gov API", "ProPublica API", "Ollama"],
     links: [
-      { label: "View Project", href: "#" }
+      { label: "View Project", href: "https://github.com/alphamanik656-cell/grant-finder-agent" }
     ],
     // Cover banner shown at the top of the card. type "list" = ranked results readout.
     // stat tone classes: c-indigo (volume), c-amber (money), c-violet (match quality)
