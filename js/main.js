@@ -103,6 +103,25 @@ function renderProjects() {
   `).join("");
 }
 
+// ===== Analytics event tracking =====
+function trackEvent(name, params) {
+  if (window.va) window.va("event", { name, data: params });
+  if (window.gtag) window.gtag("event", name, params || {});
+}
+
+function initAnalyticsTracking() {
+  const grid = document.getElementById("projectGrid");
+  if (grid) {
+    grid.addEventListener("click", (e) => {
+      const link = e.target.closest(".project-link");
+      if (!link) return;
+      const card = link.closest(".project-card");
+      const title = card?.querySelector(".project-title")?.textContent || "unknown";
+      trackEvent("view_project_click", { project_name: title });
+    });
+  }
+}
+
 // ===== Render skills =====
 function renderSkills() {
   const grid = document.getElementById("skillsGrid");
@@ -149,6 +168,7 @@ function initFeedbackForm() {
         form.reset();
         status.textContent = "Thanks — your feedback was sent.";
         status.classList.add("success");
+        trackEvent("feedback_submitted", {});
       } else {
         status.textContent = "Something went wrong. Please try again.";
         status.classList.add("error");
@@ -224,5 +244,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initScrollReveal();
   initNavScroll();
   initFeedbackForm();
+  initAnalyticsTracking();
   document.getElementById("year").textContent = new Date().getFullYear();
 });
