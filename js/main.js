@@ -119,18 +119,47 @@ function renderSkills() {
   `).join("");
 }
 
-// ===== Render contact links =====
-function renderContact() {
-  const wrap = document.getElementById("contactLinks");
-  wrap.innerHTML = CONTACT_LINKS.map(c => `
-    <a class="contact-link" href="${c.href}" target="_blank" rel="noopener">
-      <span class="contact-icon">${ICONS[c.icon] || ""}</span>
-      <span class="contact-text">
-        <span class="contact-label">${c.label}</span>
-        <span class="contact-value">${c.value}</span>
-      </span>
-    </a>
-  `).join("");
+// ===== Feedback form =====
+function initFeedbackForm() {
+  const form = document.getElementById("feedbackForm");
+  const status = document.getElementById("feedbackStatus");
+  if (!form) return;
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalLabel = submitBtn.textContent;
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending...";
+    status.textContent = "";
+    status.classList.remove("success", "error");
+
+    try {
+      const formData = new FormData(form);
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: formData,
+      });
+      const result = await res.json();
+
+      if (result.success) {
+        form.reset();
+        status.textContent = "Thanks — your feedback was sent.";
+        status.classList.add("success");
+      } else {
+        status.textContent = "Something went wrong. Please try again.";
+        status.classList.add("error");
+      }
+    } catch {
+      status.textContent = "Something went wrong. Please try again.";
+      status.classList.add("error");
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalLabel;
+    }
+  });
 }
 
 // ===== Render about quick facts =====
@@ -189,10 +218,10 @@ function initNavScroll() {
 document.addEventListener("DOMContentLoaded", () => {
   renderProjects();
   renderSkills();
-  renderContact();
   renderFacts();
   initNavToggle();
   initScrollReveal();
   initNavScroll();
+  initFeedbackForm();
   document.getElementById("year").textContent = new Date().getFullYear();
 });

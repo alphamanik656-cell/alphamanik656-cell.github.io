@@ -44,7 +44,7 @@
       <a href="#work">Work</a>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
+      <a href="#feedback">Feedback</a>
     </div>
   </nav>
 </header>
@@ -61,7 +61,7 @@
       analyzing market risk to tutoring students. This is where I keep them.</p>
     <div class="hero-actions">
       <a href="#work" class="btn btn-primary">View my work</a>
-      <a href="#contact" class="btn btn-secondary">Get in touch</a>
+      <a href="#feedback" class="btn btn-secondary">Leave feedback</a>
     </div>
   </div>
 </section>
@@ -105,14 +105,33 @@
   <div class="skills-grid" id="skillsGrid"></div>
 </section>
 
-<!-- ===== CONTACT ===== -->
-<section class="section contact-section" id="contact">
+<!-- ===== FEEDBACK ===== -->
+<section class="section contact-section" id="feedback">
   <div class="contact-card reveal">
-    <span class="section-kicker">Contact</span>
-    <h2 class="section-title">Let's talk</h2>
-    <p class="section-desc">Whether you're reviewing an application, hiring, or just curious about a
-      project — reach out.</p>
-    <div class="contact-links" id="contactLinks"></div>
+    <span class="section-kicker">Feedback</span>
+    <h2 class="section-title">Tell me what you think</h2>
+    <p class="section-desc">Found a bug, have an idea, or just want to say hi? Leave a note —
+      it goes straight to my inbox.</p>
+    <form id="feedbackForm" class="feedback-form">
+      <!-- Get a free access key at web3forms.com (no signup) and paste it below -->
+      <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
+      <input type="hidden" name="subject" value="New feedback from portfolio site" />
+      <textarea
+        name="message"
+        class="feedback-textarea"
+        rows="5"
+        placeholder="Your feedback..."
+        required
+      ></textarea>
+      <input
+        type="email"
+        name="email"
+        class="feedback-input"
+        placeholder="Your email (optional, if you'd like a reply)"
+      />
+      <button type="submit" class="btn btn-primary feedback-submit">Send Feedback</button>
+      <p class="feedback-status" id="feedbackStatus" role="status"></p>
+    </form>
   </div>
 </section>
 

@@ -115,8 +115,5 @@ const SKILLS = [
   { group: "Frontend", icon: "layout", items: ["React", "KaTeX"] }
 ];
 
-// ---- CONTACT ---------------------------------------------------------------
-// icon keys come from js/icons.js
-const CONTACT_LINKS = [
-  { label: "Email", icon: "mail", value: "aineshmanik@gmail.com", href: "mailto:aineshmanik@gmail.com" }
-];
+// Feedback form submissions are handled by js/main.js via Web3Forms —
+// see the hidden access_key field in index.html's #feedbackForm.
