@@ -137,10 +137,11 @@ function initFeedbackForm() {
 
     try {
       const formData = new FormData(form);
+      const payload = Object.fromEntries(formData.entries());
       const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { Accept: "application/json" },
-        body: formData,
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(payload),
       });
       const result = await res.json();
 
