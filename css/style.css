@@ -377,6 +377,28 @@ code {
   font-weight: 500;
 }
 
+.more-projects-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 32px;
+  padding: 14px 20px;
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-sm);
+  color: var(--text-tertiary);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.02em;
+}
+.more-projects-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--text-tertiary);
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.06);
+}
+
 /* ---- project cover banner ("live readout" mockup) ---- */
 .project-banner {
   position: relative;
