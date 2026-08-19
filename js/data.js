@@ -100,6 +100,32 @@ const PROJECTS = [
       ],
       gaugePercent: 78
     }
+  },
+  {
+    title: "Study Buddy",
+    icon: "book",
+    status: "live",
+    summary: "An AI study companion that turns messy class notes into plain-language breakdowns, flashcards, and a boss-battle quiz game.",
+    description: "Upload class notes, a PDF, or a photo of handwriting, and Study Buddy rewrites the material as a numbered, plain-language walkthrough, then generates flashcards and a multiple-choice \"boss battle\" quiz for active recall — each paired with a memory trick to help it stick. A standalone AP Practice mode covers all 43 official College Board subjects with AI-generated MCQs and free-response questions in the style of the real exam. Built solo for the QuantumHacks hackathon; a no-signup guest mode lets anyone try the full app instantly.",
+    tags: ["React", "Node.js", "Groq API", "SQLite"],
+    links: [
+      { label: "View Project", href: "https://frontend-lac-rho-74.vercel.app" }
+    ],
+    // type "list" = ranked topics with a mastery-style match score.
+    readout: {
+      type: "list",
+      filename: "study_session.json",
+      stats: [
+        { k: "AP Subjects", v: "43", tone: "c-indigo" },
+        { k: "Cards Made", v: "72", tone: "c-amber" },
+        { k: "Quiz Streak", v: "9x", tone: "c-violet" }
+      ],
+      items: [
+        { name: "Photosynthesis", amount: "24 cards", match: 92 },
+        { name: "The Water Cycle", amount: "18 cards", match: 85 },
+        { name: "French Revolution", amount: "30 cards", match: 78 }
+      ]
+    }
   }
   // Add more projects by copying the block above. Pick an icon key from js/icons.js
   // (or add a new one there) that matches what the project actually does.
