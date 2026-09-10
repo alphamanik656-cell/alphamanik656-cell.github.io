@@ -126,6 +126,28 @@ const PROJECTS = [
         { name: "French Revolution", amount: "30 cards", match: 78 }
       ]
     }
+  },
+  {
+    title: "PhishCheck",
+    icon: "mail",
+    status: "live",
+    summary: "An AI phishing analyst that quotes the exact evidence for every red flag it finds — not just a verdict.",
+    description: "Paste any email and get a verdict, a risk score, and every red flag quoted directly from the text — domain spoofing, urgency pressure, credential-harvesting links, and more — so you actually learn what to look for instead of trusting a black-box label. Runs on free local Ollama in development and switches to Groq's free tier automatically in production, with zero code changes. Built solo for the HackMatrix hackathon (MLH).",
+    tags: ["Node.js", "Express", "Groq API", "Ollama"],
+    links: [
+      { label: "View Project", href: "https://phishcheck-q3ng.onrender.com/" }
+    ],
+    // type "annotation" = flags the red flag, shows the verdict, and the reasoning.
+    readout: {
+      type: "annotation",
+      filename: "phishcheck_scan.json",
+      tag: "Domain Spoofing",
+      confidence: 92,
+      problem: "Unusual Sign-in Attempt Detected",
+      wrongStep: "chase-secure-verify.com",
+      correctStep: "Likely Phishing",
+      correctHint: "Every red flag is backed by an exact quote from the email — never a bare verdict."
+    }
   }
   // Add more projects by copying the block above. Pick an icon key from js/icons.js
   // (or add a new one there) that matches what the project actually does.
