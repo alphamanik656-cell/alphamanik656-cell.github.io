@@ -163,5 +163,87 @@ const SKILLS = [
   { group: "Frontend", icon: "layout", items: ["React", "KaTeX"] }
 ];
 
+// ---- CERTIFICATES & CREDENTIALS --------------------------------------------
+// Shown newest first. "verify" is the Verify button's link — a public verification page,
+// or a picture of the certificate in assets/certificates/ when there isn't one.
+const CERTIFICATES = [
+  {
+    title: "Machine Learning Fundamentals",
+    issuer: "FreeAcademy.ai",
+    date: "Oct 10, 2026",
+    detail: "35 lessons · Final exam passed",
+    id: "FA-2026-MLF-1TWA9A",
+    verify: "https://freeacademy.ai/verify/FA-2026-MLF-1TWA9A"
+  },
+  {
+    title: "The Hour of A.I.",
+    issuer: "Code.org",
+    date: "Sep 2026",
+    detail: "Certificate of Completion · Basic concepts of Artificial Intelligence",
+    verify: "assets/certificates/hour-of-ai.png"
+  },
+  {
+    title: "Python For AI Data Science",
+    issuer: "FreeAcademy.ai",
+    date: "Aug 27, 2026",
+    detail: "13 lessons · Final exam passed",
+    id: "FA-2026-PFAD-AB9ENR",
+    verify: "https://freeacademy.ai/verify/FA-2026-PFAD-AB9ENR"
+  },
+  {
+    title: "Advanced Python Programming",
+    issuer: "FreeAcademy.ai",
+    date: "Aug 21, 2026",
+    detail: "11 lessons · Final exam passed",
+    id: "FA-2026-APP-AHD0BF",
+    verify: "https://freeacademy.ai/verify/FA-2026-APP-AHD0BF"
+  },
+  {
+    title: "Mathematics For AI",
+    issuer: "FreeAcademy.ai",
+    date: "Aug 17, 2026",
+    detail: "9 lessons · Final exam passed",
+    id: "FA-2026-MFA-DTPA7G",
+    verify: "https://freeacademy.ai/verify/FA-2026-MFA-DTPA7G"
+  },
+  {
+    title: "Probability Statistics AI",
+    issuer: "FreeAcademy.ai",
+    date: "Aug 13, 2026",
+    detail: "20 lessons · Final exam passed",
+    id: "FA-2026-PSA-MGILYB",
+    verify: "https://freeacademy.ai/verify/FA-2026-PSA-MGILYB"
+  },
+  {
+    title: "AI Finance Accounting",
+    issuer: "FreeAcademy.ai",
+    date: "Aug 12, 2026",
+    detail: "12 lessons · Final exam passed",
+    id: "FA-2026-AFA-KQJV05",
+    verify: "https://freeacademy.ai/verify/FA-2026-AFA-KQJV05"
+  },
+  {
+    title: "Wharton Global High School Investment Competition",
+    issuer: "Wharton Global Youth Program",
+    date: "Feb 26, 2026",
+    detail: "Participant · 2025–2026 competition",
+    verify: "https://achievements.globalyouth.wharton.upenn.edu/830fc59a-2b1f-4989-8bb9-1555a66b1872"
+  },
+  {
+    title: "Wharton Global High School Investment Competition",
+    issuer: "Wharton Global Youth Program",
+    date: "Feb 27, 2025",
+    detail: "Participant · 2024–2025 competition",
+    verify: "https://achievements.globalyouth.wharton.upenn.edu/e3149091-c845-4625-8b2d-18d1daba5d1a"
+  }
+];
+
+// Optional link shown under the certificate grid (e.g. an Accredible credentials wallet).
+// Leave url empty to hide it.
+const CREDENTIALS_WALLET = {
+  label: "Ainesh Manik's Credentials wallet on Accredible",
+  url: "https://achievements.globalyouth.wharton.upenn.edu/profile/aineshmanik152274/wallet"
+};
+
 // Feedback form submissions are handled by js/main.js via Web3Forms —
 // see the hidden access_key field in index.html's #feedbackForm.

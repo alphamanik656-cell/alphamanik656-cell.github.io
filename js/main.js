@@ -138,6 +138,34 @@ function renderSkills() {
   `).join("");
 }
 
+// ===== Render certificates =====
+function renderCertificates() {
+  const grid = document.getElementById("certGrid");
+  if (!grid) return;
+  grid.innerHTML = CERTIFICATES.map(cert => `
+    <div class="cert-card reveal">
+      <div class="cert-head">
+        <span class="cert-icon">${ICONS.award}</span>
+        <span class="cert-meta">${cert.issuer} · ${cert.date}</span>
+      </div>
+      <h3 class="cert-title">${cert.title}</h3>
+      <p class="cert-detail">${cert.detail}</p>
+      ${cert.id || cert.verify ? `
+        <div class="cert-foot">
+          ${cert.id ? `<span class="cert-id">${cert.id}</span>` : ""}
+          ${cert.verify ? `<a class="cert-verify" href="${cert.verify}" target="_blank" rel="noopener">Verify →</a>` : ""}
+        </div>` : ""}
+    </div>
+  `).join("");
+
+  const wallet = document.getElementById("certWallet");
+  if (CREDENTIALS_WALLET.url) {
+    wallet.innerHTML = `<a href="${CREDENTIALS_WALLET.url}" target="_blank" rel="noopener">${CREDENTIALS_WALLET.label} →</a>`;
+  } else {
+    wallet.remove();
+  }
+}
+
 // ===== Feedback form =====
 function initFeedbackForm() {
   const form = document.getElementById("feedbackForm");
@@ -239,6 +267,7 @@ function initNavScroll() {
 document.addEventListener("DOMContentLoaded", () => {
   renderProjects();
   renderSkills();
+  renderCertificates();
   renderFacts();
   initNavToggle();
   initScrollReveal();
